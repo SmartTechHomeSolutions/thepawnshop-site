@@ -16,9 +16,9 @@
   --radius: 7px;
   --radius-tight: 4px;
   --container: 82rem;
-  --display: Rockwell, "Clarendon", "Cooper Black", Georgia, serif;
-  --condensed: "Arial Narrow", "Roboto Condensed", "Oswald", Impact, sans-serif;
-  --body: Georgia, "Times New Roman", serif;
+  --display: "Rye", Georgia, serif;
+  --ui: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --body: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
 *,
@@ -36,7 +36,9 @@ body {
   color: var(--ink-soft);
   background: var(--paper);
   font-family: var(--body);
-  line-height: 1.5;
+  line-height: 1.56;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
@@ -109,45 +111,52 @@ ol {
 
 .brand {
   display: inline-flex;
-  width: 11.4rem;
+  width: 10.9rem;
+  align-items: center;
   text-decoration: none;
+  line-height: 0;
 }
 
 .logo-mark svg {
-  width: 11.4rem;
+  width: 100%;
   height: auto;
+  overflow: visible;
 }
 
-.logo-texas {
-  fill: #fdfbf6;
-  stroke: #1e252b;
-  stroke-width: 2.2;
-}
-
-.logo-cut {
-  fill: var(--red);
+.logo-texas-outline {
+  fill: #171717;
   opacity: 0.92;
 }
 
-.logo-the,
-.logo-pawn,
-.logo-shop {
-  fill: #171719;
-  stroke: #fdfbf6;
-  stroke-width: 0.55;
-  paint-order: stroke;
-  font-family: Georgia, serif;
-  font-weight: 900;
-  letter-spacing: 0.02em;
+.logo-texas {
+  fill: var(--red);
+  stroke: #171717;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.logo-wordmark text {
+  fill: #191919;
+  stroke: var(--paper);
+  stroke-width: 7;
+  paint-order: stroke fill;
+  font-family: var(--display);
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 .logo-the {
-  font-size: 13px;
+  font-size: 18px;
+  letter-spacing: 0.18em;
 }
 
-.logo-pawn,
+.logo-pawn {
+  font-size: 68px;
+}
+
 .logo-shop {
-  font-size: 31px;
+  font-size: 58px;
 }
 
 .site-nav {
@@ -155,10 +164,10 @@ ol {
   justify-self: center;
   align-items: center;
   gap: clamp(1rem, 2.4vw, 2.25rem);
-  font-family: var(--condensed);
-  font-size: 0.92rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-family: var(--ui);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -200,9 +209,9 @@ ol {
   padding: 0.72rem 1.35rem;
   border: 1px solid currentColor;
   border-radius: var(--radius-tight);
-  font-family: var(--condensed);
+  font-family: var(--ui);
   font-size: 0.95rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.12em;
   line-height: 1;
   text-align: center;
@@ -273,9 +282,9 @@ ol {
 .hero-watermark {
   position: absolute;
   inset: 0 0 0 auto;
-  width: min(58rem, 72vw);
-  opacity: 0.075;
-  transform: translate(4%, -2%);
+  width: min(64rem, 84vw);
+  opacity: 0.065;
+  transform: translate(5%, -4%);
   pointer-events: none;
 }
 
@@ -284,22 +293,29 @@ ol {
   height: 100%;
 }
 
-.hero-watermark path {
-  fill: var(--red);
-  stroke: var(--navy);
-  stroke-width: 2;
+.hero-watermark .logo-texas-outline {
+  fill: #171717;
+  opacity: 0.28;
+  stroke: none;
 }
 
-.hero-watermark text {
-  fill: var(--ink);
-  font-family: Georgia, serif;
-  font-size: 38px;
-  font-weight: 900;
+.hero-watermark .logo-texas {
+  fill: var(--red);
+  stroke: #171717;
+  stroke-width: 4;
+  stroke-linejoin: round;
+}
+
+.hero-watermark .logo-wordmark text {
+  fill: #171717;
+  stroke: var(--paper);
+  stroke-width: 8;
 }
 
 .page-watermark {
-  width: min(45rem, 64vw);
-  opacity: 0.055;
+  width: min(50rem, 72vw);
+  opacity: 0.05;
+  transform: translate(4%, -1%);
 }
 
 .hero-grid,
@@ -326,8 +342,8 @@ ol {
 .contact-item h2,
 .footer-links h2,
 .footer-contact h2 {
-  font-family: var(--condensed);
-  font-weight: 900;
+  font-family: var(--ui);
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -351,26 +367,30 @@ h1 {
   color: var(--ink);
   font-family: var(--display);
   font-size: clamp(3rem, 8vw, 6.15rem);
-  font-weight: 900;
-  letter-spacing: -0.045em;
-  line-height: 0.92;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 0.88;
   text-transform: uppercase;
+  text-wrap: balance;
 }
 
 .page-hero h1 {
-  max-width: 12ch;
-  font-size: clamp(2.6rem, 6.3vw, 5.2rem);
+  max-width: 11.5ch;
+  font-size: clamp(2.7rem, 5.9vw, 5.15rem);
+  line-height: 0.9;
 }
 
 .subhead {
   color: var(--red);
-  font-size: clamp(1.2rem, 2.4vw, 1.75rem);
+  font-size: clamp(0.98rem, 1.9vw, 1.2rem);
+  letter-spacing: 0.18em;
 }
 
 .lead {
   max-width: 36rem;
   color: #343331;
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.62;
 }
 
 .action-row {
@@ -397,7 +417,7 @@ h1 {
   align-items: center;
   justify-content: center;
   color: var(--red);
-  font-size: 1rem;
+  font-size: 0.92rem;
   text-align: center;
 }
 
@@ -418,16 +438,16 @@ h1 {
 
 .visit-line.strong a {
   color: var(--red);
-  font-family: var(--condensed);
-  font-size: 1.55rem;
-  font-weight: 900;
-  letter-spacing: 0.05em;
+  font-family: var(--ui);
+  font-size: 1.38rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   text-decoration: none;
 }
 
 .line-icon {
   color: var(--ink);
-  font-family: var(--condensed);
+  font-family: var(--ui);
   font-size: 1.2rem;
 }
 
@@ -459,7 +479,7 @@ h1 {
 .category-icon,
 .contact-item > span {
   color: var(--red);
-  font-family: var(--condensed);
+  font-family: var(--ui);
   font-size: 2.05rem;
   line-height: 1;
 }
@@ -467,7 +487,7 @@ h1 {
 .trust-item h2,
 .contact-item h2 {
   color: var(--ink);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .trust-item p,
@@ -509,10 +529,11 @@ h1 {
   max-width: 14ch;
   color: var(--ink);
   font-family: var(--display);
-  font-size: clamp(2rem, 4.5vw, 3.65rem);
-  line-height: 0.98;
-  letter-spacing: -0.04em;
+  font-size: clamp(1.95rem, 4.2vw, 3.45rem);
+  line-height: 0.9;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
+  text-wrap: balance;
 }
 
 .category-grid,
@@ -541,8 +562,8 @@ h1 {
 .category-card a {
   margin-top: auto;
   color: var(--navy);
-  font-family: var(--condensed);
-  font-weight: 900;
+  font-family: var(--ui);
+  font-weight: 700;
   letter-spacing: 0.11em;
   text-decoration: none;
   text-transform: uppercase;
@@ -577,10 +598,10 @@ h1 {
 
 .rating-block p {
   color: var(--ink);
-  font-family: var(--condensed);
-  font-size: 1.35rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
+  font-family: var(--ui);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -600,8 +621,8 @@ h1 {
 }
 
 .stars {
-  font-family: var(--condensed);
-  font-weight: 900;
+  font-family: var(--ui);
+  font-weight: 700;
   letter-spacing: 0.1em;
 }
 
@@ -662,7 +683,7 @@ h1 {
 .footer-brand strong {
   display: block;
   margin-bottom: 0.3rem;
-  font-family: var(--condensed);
+  font-family: var(--ui);
   font-size: 1.35rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -713,9 +734,9 @@ h1 {
 
 .fact-list dt {
   color: var(--muted);
-  font-family: var(--condensed);
+  font-family: var(--ui);
   font-size: 0.78rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -905,7 +926,7 @@ h1 {
 @media (min-width: 78rem) {
   .brand,
   .logo-mark svg {
-    width: 12.6rem;
+    width: 12rem;
   }
 
   .header-inner {
