@@ -502,29 +502,32 @@ h1 {
 
 .cards-section {
   background: var(--paper-deep);
+  padding: clamp(2rem, 4vw, 3.2rem) 0 clamp(2.35rem, 4.4vw, 4rem);
 }
 
 .cards-intro {
   display: grid;
-  gap: 0.95rem;
-  margin-bottom: 0.85rem;
+  max-width: 42rem;
+  margin: 0 auto 0.55rem;
+  gap: 0.45rem;
+  text-align: center;
 }
 
-.cards-intro-copy {
-  margin-bottom: 0;
+.cards-intro .eyebrow {
+  justify-content: center;
+  letter-spacing: 0.24em;
 }
 
-.cards-intro-copy h2 {
-  max-width: 13ch;
-}
-
-.cards-intro-note {
-  max-width: 23rem;
-  justify-self: start;
-  align-self: end;
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.58;
+.cards-intro h2 {
+  max-width: 15ch;
+  margin-inline: auto;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-wrap: balance;
 }
 
 .section-heading {
@@ -927,23 +930,15 @@ h1 {
   }
 
   .cards-intro {
-    grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 0.75fr);
-    gap: 2rem;
-    align-items: start;
-    margin-bottom: 0.65rem;
+    max-width: 34rem;
+    gap: 0.4rem;
+    margin-bottom: 0.45rem;
   }
 
-  .cards-intro-copy {
-    max-width: 30rem;
-  }
-
-  .cards-intro-copy h2 {
+  .cards-intro h2 {
     max-width: 14ch;
-  }
-
-  .cards-intro-note {
-    max-width: 18rem;
-    padding-top: 1.85rem;
+    font-size: clamp(2.05rem, 3vw, 2.95rem);
+    line-height: 0.9;
   }
 
   .category-card {
