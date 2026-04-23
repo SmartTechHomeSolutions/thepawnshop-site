@@ -16,7 +16,7 @@
   --radius: 7px;
   --radius-tight: 4px;
   --container: 82rem;
-  --display: "Sancreek", Georgia, serif;
+  --display: var(--hero-condensed);
   --hero-display: "Rye", Georgia, serif;
   --hero-condensed: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   --ui: "Inter", "Helvetica Neue", Arial, sans-serif;
