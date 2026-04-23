@@ -683,7 +683,7 @@ h1 {
 .footer-brand {
   display: grid;
   grid-template-columns: 5.45rem 1fr;
-  gap: 0.9rem;
+  gap: 1.15rem;
   align-items: center;
 }
 
