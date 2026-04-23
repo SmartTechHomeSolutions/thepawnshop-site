@@ -662,20 +662,20 @@ h1 {
 
 .footer-grid {
   display: grid;
-  gap: 1.65rem;
-  padding: 2.3rem 0 2.15rem;
+  gap: 1.55rem;
+  padding: 2.35rem 0 2.2rem;
 }
 
 .footer-brand {
   display: grid;
-  grid-template-columns: 4.6rem 1fr;
-  gap: 1rem;
+  grid-template-columns: 5rem 1fr;
+  gap: 1.05rem;
   align-items: center;
 }
 
 .footer-brand-logo {
   display: block;
-  width: 4.6rem;
+  width: 5rem;
   height: auto;
   object-fit: contain;
   margin-top: 0;
@@ -683,11 +683,11 @@ h1 {
 
 .footer-brand strong {
   display: block;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
   color: #fff;
   font-family: var(--ui);
-  font-size: 1.42rem;
-  letter-spacing: 0.095em;
+  font-size: 1.38rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -706,13 +706,13 @@ h1 {
 .footer-contact h2 {
   margin-bottom: 0.4rem;
   color: #fff;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   letter-spacing: 0.12em;
 }
 
 .site-footer .footer-grid p,
 .site-footer .footer-grid a {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .footer-grid a {
@@ -725,6 +725,11 @@ h1 {
 
 .footer-grid a:focus-visible {
   outline-color: #f1dbc8;
+}
+
+.footer-brand p,
+.footer-contact p {
+  color: rgba(255, 255, 255, 0.86);
 }
 
 .fact-list {
@@ -934,13 +939,13 @@ h1 {
   }
 
   .footer-grid {
-    grid-template-columns: minmax(18rem, 1.7fr) minmax(0, 0.82fr) minmax(0, 0.92fr) minmax(0, 1fr);
+    grid-template-columns: minmax(18.5rem, 1.72fr) minmax(0, 0.82fr) minmax(0, 0.92fr) minmax(0, 1fr);
   }
 
   .footer-links,
   .footer-contact {
-    padding-left: 1.8rem;
-    border-left: 1px solid rgba(255, 255, 255, 0.18);
+    padding-left: 1.75rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
   }
 
   .editorial-grid {
