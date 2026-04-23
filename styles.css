@@ -117,68 +117,38 @@ ol {
   line-height: 0;
 }
 
-.logo-mark svg,
-.brand-logo {
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
-.brand-logo text {
-  font-family: var(--display);
-  font-weight: 400;
-}
-
-.logo-texas-outline {
-  fill: #181818;
-}
-
-.logo-texas {
-  fill: var(--red);
-  stroke: #181818;
-  stroke-width: 3.5;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.logo-wordmark text {
-  fill: #191919;
-  stroke: var(--paper);
-  stroke-width: 6;
-  paint-order: stroke fill;
-  letter-spacing: 0.01em;
-}
-
-.logo-the {
-  font-size: 13px;
-  letter-spacing: 0.32em;
-}
-
-.logo-pawn {
-  font-size: 47px;
-}
-
-.logo-shop {
-  font-size: 41px;
-}
-
-.brand-logo--watermark {
+.logo-mark {
   display: block;
   width: 100%;
-  opacity: 0.085;
 }
 
-.brand-logo--watermark .logo-texas-outline {
-  opacity: 0.14;
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-.brand-logo--watermark .logo-texas {
-  stroke-width: 3.2;
+.brand-logo--header {
+  image-rendering: auto;
 }
 
-.brand-logo--watermark .logo-wordmark text {
-  opacity: 0.16;
-  stroke-width: 8;
+.hero-watermark .brand-logo--watermark {
+  position: absolute;
+  top: 50%;
+  left: 58%;
+  width: min(64rem, 86vw);
+  max-width: none;
+  opacity: 0.12;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  transform-origin: center;
+  image-rendering: auto;
+}
+
+.page-watermark .brand-logo--watermark {
+  left: 57.5%;
+  width: min(56rem, 78vw);
+  opacity: 0.1;
 }
 
 .site-nav {
@@ -288,6 +258,7 @@ ol {
 .page-hero {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
   border-bottom: 1px solid var(--line-dark);
   background: var(--paper);
 }
@@ -304,48 +275,14 @@ ol {
 .hero-watermark {
   position: absolute;
   inset: 0;
-  display: flex;
-  width: min(58rem, 76vw);
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: clamp(0.9rem, 2.5vw, 2rem) clamp(1rem, 3vw, 2.5rem) 0 0;
-  opacity: 1;
+  overflow: hidden;
   pointer-events: none;
+  user-select: none;
   z-index: 0;
 }
 
-.hero-watermark svg {
-  width: 100%;
-  height: auto;
-  transform: translate(8%, -2%);
-}
-
-.hero-watermark .logo-texas-outline {
-  fill: #171717;
-  opacity: 0.14;
-}
-
-.hero-watermark .logo-texas {
-  fill: var(--red);
-  stroke: #171717;
-  stroke-width: 3.3;
-  stroke-linejoin: round;
-}
-
-.hero-watermark .logo-wordmark text {
-  fill: #171717;
-  stroke: var(--paper);
-  stroke-width: 8;
-}
-
 .page-watermark {
-  width: min(50rem, 70vw);
-  opacity: 0.075;
-  transform: translate(10%, -1%);
-}
-
-.page-watermark svg {
-  transform: translate(4%, 0);
+  overflow: hidden;
 }
 
 .hero-grid,
@@ -834,6 +771,18 @@ h1 {
   .card-heading span {
     width: 1.7rem;
   }
+
+  .hero-watermark .brand-logo--watermark {
+    left: 61%;
+    width: min(31rem, 96vw);
+    opacity: 0.08;
+  }
+
+  .page-watermark .brand-logo--watermark {
+    left: 60%;
+    width: min(28rem, 92vw);
+    opacity: 0.07;
+  }
 }
 
 @media (min-width: 44rem) {
@@ -956,11 +905,21 @@ h1 {
 
 @media (min-width: 78rem) {
   .brand,
-  .logo-mark svg {
+  .brand-logo--header {
     width: 12rem;
   }
 
   .header-inner {
     min-height: 6.4rem;
+  }
+
+  .hero-watermark .brand-logo--watermark {
+    width: min(70rem, 82vw);
+    left: 59%;
+  }
+
+  .page-watermark .brand-logo--watermark {
+    width: min(60rem, 76vw);
+    left: 58%;
   }
 }
