@@ -693,6 +693,9 @@ h1 {
   height: auto;
   object-fit: contain;
   margin-top: 0;
+  filter:
+    drop-shadow(0 0 3px rgba(244, 238, 226, 0.42))
+    drop-shadow(0 0 10px rgba(244, 238, 226, 0.18));
 }
 
 .footer-brand strong {
