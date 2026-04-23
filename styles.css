@@ -504,18 +504,27 @@ h1 {
   background: var(--paper-deep);
 }
 
-.cards-section .section-heading {
-  max-width: none;
+.cards-intro {
+  display: grid;
+  gap: 0.95rem;
+  margin-bottom: 0.85rem;
 }
 
-.cards-section .section-heading p,
-.cards-section .section-heading h2 {
-  margin-inline: auto;
-  text-align: center;
+.cards-intro-copy {
+  margin-bottom: 0;
 }
 
-.cards-section .section-heading h2 {
-  max-width: 15ch;
+.cards-intro-copy h2 {
+  max-width: 13ch;
+}
+
+.cards-intro-note {
+  max-width: 23rem;
+  justify-self: start;
+  align-self: end;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.58;
 }
 
 .section-heading {
@@ -917,18 +926,24 @@ h1 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .cards-section .section-heading {
-    width: min(100%, 66rem);
-    margin-bottom: 0.9rem;
-    justify-items: center;
+  .cards-intro {
+    grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 0.75fr);
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 0.65rem;
   }
 
-  .cards-section .section-heading .eyebrow {
-    justify-self: center;
+  .cards-intro-copy {
+    max-width: 30rem;
   }
 
-  .cards-section .section-heading h2 {
-    max-width: 18ch;
+  .cards-intro-copy h2 {
+    max-width: 14ch;
+  }
+
+  .cards-intro-note {
+    max-width: 18rem;
+    padding-top: 1.85rem;
   }
 
   .category-card {
