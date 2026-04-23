@@ -360,9 +360,13 @@ h1 {
 }
 
 .page-hero h1 {
-  max-width: 9.1ch;
-  font-size: clamp(2.65rem, 5.25vw, 4.85rem);
+  display: grid;
+  max-width: 11.4ch;
+  font-family: var(--hero-display);
+  font-size: clamp(2.9rem, 5vw, 5rem);
   line-height: 0.88;
+  letter-spacing: 0;
+  text-wrap: balance;
 }
 
 .subhead {
