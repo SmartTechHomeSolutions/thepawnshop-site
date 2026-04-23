@@ -668,14 +668,14 @@ h1 {
 
 .footer-brand {
   display: grid;
-  grid-template-columns: 5rem 1fr;
-  gap: 1.05rem;
+  grid-template-columns: 5.45rem 1fr;
+  gap: 0.9rem;
   align-items: center;
 }
 
 .footer-brand-logo {
   display: block;
-  width: 5rem;
+  width: 5.45rem;
   height: auto;
   object-fit: contain;
   margin-top: 0;
@@ -686,13 +686,13 @@ h1 {
   margin-bottom: 0.3rem;
   color: #fff;
   font-family: var(--ui);
-  font-size: 1.38rem;
-  letter-spacing: 0.1em;
+  font-size: 1.44rem;
+  letter-spacing: 0.095em;
   text-transform: uppercase;
 }
 
 .footer-brand p {
-  max-width: 18rem;
+  max-width: 16.8rem;
 }
 
 .footer-links,
