@@ -504,6 +504,20 @@ h1 {
   background: var(--paper-deep);
 }
 
+.cards-section .section-heading {
+  max-width: none;
+}
+
+.cards-section .section-heading p,
+.cards-section .section-heading h2 {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.cards-section .section-heading h2 {
+  max-width: 15ch;
+}
+
 .section-heading {
   display: grid;
   max-width: 52rem;
@@ -901,6 +915,20 @@ h1 {
 
   .category-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .cards-section .section-heading {
+    width: min(100%, 66rem);
+    margin-bottom: 0.9rem;
+    justify-items: center;
+  }
+
+  .cards-section .section-heading .eyebrow {
+    justify-self: center;
+  }
+
+  .cards-section .section-heading h2 {
+    max-width: 18ch;
   }
 
   .category-card {
