@@ -1068,3 +1068,147 @@ h1 {
     font-size: clamp(3.55rem, 5.45vw, 6.35rem);
   }
 }
+
+.home-page .home-trust {
+  padding-block: clamp(0.95rem, 1.8vw, 1.35rem);
+  margin-bottom: clamp(0.9rem, 1.8vw, 1.25rem);
+}
+
+.home-page .trust-grid {
+  gap: 0;
+}
+
+.home-page .home-services {
+  padding-block: clamp(2.85rem, 5vw, 4.5rem);
+}
+
+.home-page .home-services__intro {
+  margin-bottom: clamp(1.75rem, 2.7vw, 2.25rem);
+}
+
+.home-page .home-services .category-grid {
+  gap: clamp(0.9rem, 1.7vw, 1.15rem);
+}
+
+.home-page .home-services .category-card {
+  padding: clamp(1.05rem, 1.5vw, 1.35rem);
+}
+
+.home-page .home-reviews {
+  padding-block: clamp(2.4rem, 4.5vw, 3.75rem);
+  margin-block: clamp(0.9rem, 2vw, 1.25rem);
+}
+
+.home-page .reviews-grid {
+  gap: clamp(0.95rem, 1.6vw, 1.2rem);
+  align-items: stretch;
+}
+
+.home-page .rating-block,
+.home-page .review-card {
+  padding: 1.1rem 1.15rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.home-page .rating-block {
+  align-content: start;
+  background: #fffaf2;
+}
+
+.home-page .review-card {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.home-page .reviews-button {
+  margin-top: 0.15rem;
+}
+
+.home-page .home-contact {
+  padding-block: clamp(2.2rem, 4vw, 3.25rem);
+  margin-top: clamp(1rem, 2vw, 1.5rem);
+}
+
+.home-page .contact-grid {
+  gap: clamp(0.85rem, 1.5vw, 1.1rem);
+}
+
+.home-page .contact-item {
+  padding: 1.15rem;
+  align-items: start;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.home-page .contact-item > span {
+  margin-top: 0.1rem;
+}
+
+.home-page .site-footer {
+  margin-top: clamp(1.85rem, 3.6vw, 3rem);
+}
+
+.home-page .footer-grid {
+  padding-top: clamp(2.6rem, 4vw, 3.2rem);
+}
+
+@media (min-width: 44rem) {
+  .home-page .home-services .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-page .reviews-grid {
+    grid-template-columns: minmax(16rem, 0.9fr) repeat(3, minmax(0, 1fr));
+  }
+
+  .home-page .reviews-button {
+    grid-column: 1 / -1;
+  }
+
+  .home-page .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 62rem) {
+  .home-page .trust-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .home-page .trust-item,
+  .home-page .trust-item:nth-child(2) {
+    min-height: 5.2rem;
+    padding: 0.85rem 1.2rem;
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
+
+  .home-page .trust-item:first-child {
+    border-left: 0;
+  }
+
+  .home-page .home-services .category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-page .reviews-grid {
+    grid-template-columns: minmax(17rem, 0.92fr) repeat(3, minmax(0, 1fr));
+  }
+
+  .home-page .reviews-button {
+    justify-self: start;
+  }
+
+  .home-page .contact-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-page .contact-item {
+    padding: 1.25rem 1.3rem;
+  }
+}
