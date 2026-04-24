@@ -16,6 +16,7 @@
   --radius: 7px;
   --radius-tight: 4px;
   --container: 82rem;
+  --section-breathing: 1.25rem;
   --display: var(--hero-condensed);
   --hero-display: "Rye", Georgia, serif;
   --hero-condensed: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
@@ -459,6 +460,10 @@ h1 {
   background: var(--paper);
 }
 
+.content-band--compact + .content-band--compact {
+  margin-top: var(--section-breathing);
+}
+
 .trust-grid {
   display: grid;
 }
@@ -509,8 +514,8 @@ h1 {
 .cards-intro {
   display: grid;
   max-width: 42rem;
-  margin: 0 auto 0.25rem;
-  gap: 0.15rem;
+  margin: 0 auto calc(0.25rem + var(--section-breathing));
+  gap: 0.2rem;
   text-align: center;
 }
 
