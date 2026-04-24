@@ -1045,6 +1045,29 @@ h1 {
   align-items: start;
 }
 
+.shop-photo-strip {
+  display: grid;
+  gap: 1.15rem;
+  align-items: start;
+}
+
+.shop-photo-strip__copy {
+  max-width: 34rem;
+}
+
+.shop-photo-grid--compact {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.shop-photo-grid--compact .shop-photo-card {
+  padding: 0.75rem;
+}
+
+.shop-photo-grid--compact .shop-photo-label {
+  padding-inline: 0.5rem;
+  font-size: 0.68rem;
+}
+
 .shop-photo-feature,
 .shop-photo-card {
   display: grid;
@@ -1351,7 +1374,7 @@ h1 {
     grid-column: 1 / -1;
   }
 
-  .services-photo-grid,
+  .shop-photo-grid--compact,
   .gallery-page .shop-photo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1476,15 +1499,11 @@ h1 {
     grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.7fr);
   }
 
-  .home-page .shop-photo-layout {
-    grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.92fr);
+  .home-page .shop-photo-strip {
+    grid-template-columns: minmax(18rem, 0.9fr) minmax(0, 1.1fr);
   }
 
-  .home-page .shop-photo-supports {
-    align-content: start;
-  }
-
-  .services-photo-grid {
+  .home-page .shop-photo-strip__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
@@ -1730,15 +1749,7 @@ h1 {
     justify-self: stretch;
   }
 
-  .home-page .shop-photo-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .home-page .shop-photo-feature {
-    order: 0;
-  }
-
-  .home-page .shop-photo-supports {
+  .home-page .shop-photo-strip {
     grid-template-columns: minmax(0, 1fr);
   }
 
