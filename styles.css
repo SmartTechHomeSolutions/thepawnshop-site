@@ -1045,6 +1045,36 @@ h1 {
   align-items: start;
 }
 
+.home-shop-preview {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.home-shop-preview__copy {
+  max-width: 34rem;
+}
+
+.home-shop-collage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.home-shop-collage .shop-photo-card {
+  padding: 0.8rem;
+}
+
+.home-shop-collage .is-feature {
+  grid-row: span 2;
+}
+
+.shop-photo-frame--feature {
+  aspect-ratio: 16 / 10;
+}
+
 .shop-photo-strip {
   display: grid;
   gap: 1.15rem;
@@ -1374,7 +1404,7 @@ h1 {
     grid-column: 1 / -1;
   }
 
-  .shop-photo-grid--compact,
+  .home-shop-collage,
   .gallery-page .shop-photo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1499,12 +1529,8 @@ h1 {
     grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.7fr);
   }
 
-  .home-page .shop-photo-strip {
+  .home-page .home-shop-preview {
     grid-template-columns: minmax(18rem, 0.9fr) minmax(0, 1.1fr);
-  }
-
-  .home-page .shop-photo-strip__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .gallery-page .shop-photo-grid {
@@ -1749,7 +1775,7 @@ h1 {
     justify-self: stretch;
   }
 
-  .home-page .shop-photo-strip {
+  .home-page .home-shop-preview {
     grid-template-columns: minmax(0, 1fr);
   }
 
