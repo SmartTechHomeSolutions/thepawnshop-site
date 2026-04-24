@@ -853,6 +853,60 @@ h1 {
   line-height: 1.35;
 }
 
+.visit-card__note {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.media-slot {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.media-slot__frame {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 0.55rem;
+  min-height: clamp(12rem, 20vw, 18rem);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  background: #fffaf2;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  aspect-ratio: 21 / 9;
+  text-align: center;
+}
+
+.media-slot__eyebrow {
+  color: var(--red);
+  font-family: var(--ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.media-slot__label {
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(1.35rem, 2.6vw, 2.1rem);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.media-slot__note {
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 @media (max-width: 42rem) {
   body {
     overflow-x: hidden;
