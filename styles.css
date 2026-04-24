@@ -460,10 +460,6 @@ h1 {
   background: var(--paper);
 }
 
-.content-band--compact + .content-band--compact {
-  margin-top: var(--section-breathing);
-}
-
 .trust-grid {
   display: grid;
 }
@@ -514,7 +510,7 @@ h1 {
 .cards-intro {
   display: grid;
   max-width: 42rem;
-  margin: 0 auto calc(0.25rem + var(--section-breathing));
+  margin: 0 auto 0;
   gap: 0.2rem;
   text-align: center;
 }
@@ -568,6 +564,26 @@ h1 {
 .interior-module__content .feature-grid,
 .interior-module__content .service-tile-grid {
   margin-top: 0;
+}
+
+.home-trust {
+  margin-bottom: var(--section-breathing);
+}
+
+.home-services {
+  margin-block: var(--section-breathing);
+}
+
+.home-services__intro {
+  margin-bottom: var(--section-breathing);
+}
+
+.home-reviews {
+  margin-block: var(--section-breathing);
+}
+
+.home-contact {
+  margin-top: var(--section-breathing);
 }
 
 .section-heading h2,
