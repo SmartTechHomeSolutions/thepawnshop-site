@@ -299,7 +299,7 @@ ol {
   position: relative;
   display: grid;
   gap: 2rem;
-  align-items: center;
+  align-items: start;
   z-index: 1;
 }
 
@@ -859,6 +859,107 @@ h1 {
   line-height: 1.45;
 }
 
+.site-photo-card {
+  display: grid;
+  gap: 0.9rem;
+  min-width: 0;
+  width: min(100%, 34rem);
+  padding: clamp(0.95rem, 2vw, 1.25rem);
+  background: var(--panel);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  align-self: start;
+}
+
+.storefront-photo-card,
+.gun-room-photo-card {
+  justify-self: end;
+}
+
+.gun-room-photo-card {
+  width: min(100%, 37rem);
+}
+
+.site-photo-card__figure {
+  display: grid;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.site-photo-card__figure--wide {
+  --photo-ratio: 5 / 3;
+}
+
+.site-photo-card__figure--tall {
+  --photo-ratio: 4 / 3;
+}
+
+.site-photo-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: var(--photo-ratio, 16 / 9);
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 0.15rem);
+  background: #efe8dc;
+}
+
+.site-photo-card__caption {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.site-photo-card__meta {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.site-photo-card__eyebrow {
+  color: var(--red);
+  font-family: var(--ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.site-photo-card__detail {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.site-photo-card__detail.strong {
+  justify-content: center;
+  color: var(--red);
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.site-photo-card__detail a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-photo-card__icon {
+  color: var(--red);
+  flex: 0 0 auto;
+}
+
+.site-photo-card__note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
 .media-slot {
   display: grid;
   gap: 0.75rem;
@@ -1035,6 +1136,10 @@ h1 {
   .hero-grid,
   .page-hero-grid {
     grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.42fr);
+  }
+
+  .storefront-photo-card {
+    width: min(100%, 34rem);
   }
 
   .visit-card {
@@ -1362,5 +1467,13 @@ h1 {
 
   .about-page .about-story__content {
     align-self: start;
+  }
+}
+
+@media (max-width: 61.999rem) {
+  .storefront-photo-card,
+  .gun-room-photo-card {
+    width: 100%;
+    justify-self: stretch;
   }
 }
