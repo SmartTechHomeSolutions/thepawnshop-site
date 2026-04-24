@@ -639,10 +639,6 @@ h1 {
   line-height: 1.08;
 }
 
-.service-tile.featured {
-  background: #efe3d6;
-}
-
 .reviews-grid {
   display: grid;
   gap: 1rem;
