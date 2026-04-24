@@ -16,6 +16,8 @@
   --radius: 7px;
   --radius-tight: 4px;
   --container: 82rem;
+  --band-padding-y: clamp(2.25rem, 4vw, 4rem);
+  --band-padding-y-tight: clamp(1.75rem, 3vw, 3rem);
   --display: var(--hero-condensed);
   --hero-display: "Rye", Georgia, serif;
   --hero-condensed: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
@@ -257,9 +259,10 @@ ol {
 }
 
 .hero,
-.page-hero {
+.page-hero,
+.content-band {
   position: relative;
-  overflow: hidden;
+  overflow: clip;
   isolation: isolate;
   border-bottom: 1px solid var(--line-dark);
   background: var(--paper);
@@ -271,7 +274,30 @@ ol {
 }
 
 .page-hero {
-  padding: clamp(3rem, 6vw, 5.4rem) 0 clamp(2.6rem, 5vw, 4rem);
+  padding: clamp(2.4rem, 4.8vw, 4rem) 0 clamp(2rem, 4vw, 3.25rem);
+}
+
+.content-band--warm,
+.cards-section {
+  background: var(--paper-deep);
+}
+
+.content-band--pad,
+.section {
+  padding: var(--band-padding-y) 0;
+}
+
+.content-band--compact,
+.cards-section,
+.trust-strip,
+.reviews-band,
+.contact-strip {
+  padding: var(--band-padding-y-tight) 0;
+}
+
+.content-band--hero,
+.page-hero {
+  padding: clamp(2.4rem, 4.8vw, 4rem) 0 clamp(2rem, 4vw, 3.25rem);
 }
 
 .hero-watermark {
@@ -501,12 +527,12 @@ h1 {
 }
 
 .section {
-  padding: clamp(2.5rem, 5vw, 4.6rem) 0;
+  padding: var(--band-padding-y) 0;
 }
 
 .cards-section {
   background: var(--paper-deep);
-  padding: clamp(1.85rem, 3.6vw, 3rem) 0 clamp(2.2rem, 4vw, 3.8rem);
+  padding: var(--band-padding-y-tight) 0;
 }
 
 .cards-intro {
@@ -526,7 +552,7 @@ h1 {
   display: grid;
   max-width: 52rem;
   gap: 0.65rem;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 .compact-heading {
@@ -560,7 +586,7 @@ h1 {
   display: grid;
   align-content: start;
   gap: 0.55rem;
-  min-height: 9rem;
+  min-height: 0;
   padding: 1.15rem;
   background: var(--panel);
   border: 1px solid var(--line);
@@ -588,10 +614,6 @@ h1 {
 
 .service-tile.featured {
   background: #efe3d6;
-}
-
-.reviews-band {
-  padding: 1.25rem 0;
 }
 
 .reviews-grid {
@@ -650,10 +672,6 @@ h1 {
 
 .reviews-button {
   justify-self: start;
-}
-
-.contact-strip {
-  padding: 0.95rem 0;
 }
 
 .contact-grid {
@@ -931,7 +949,7 @@ h1 {
   }
 
   .category-card {
-    min-height: 10.5rem;
+    min-height: 0;
   }
 
   .service-tile-grid {
