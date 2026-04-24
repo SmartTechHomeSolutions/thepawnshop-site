@@ -94,12 +94,10 @@ ol {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(244, 240, 232, 0.97);
+  background: var(--paper);
   border-top: 1px solid rgba(21, 40, 61, 0.9);
   border-bottom: 1px solid var(--line-dark);
+  box-shadow: var(--shadow-soft);
 }
 
 .header-inner {
@@ -271,7 +269,7 @@ ol {
 }
 
 .page-hero {
-  padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(2.1rem, 4.5vw, 3.5rem);
+  padding: clamp(3rem, 6vw, 5.4rem) 0 clamp(2.6rem, 5vw, 4rem);
 }
 
 .hero-watermark {
@@ -901,7 +899,7 @@ h1 {
   }
 
   .visit-card {
-    transform: translateY(0.45rem);
+    transform: none;
   }
 
   .trust-grid {
