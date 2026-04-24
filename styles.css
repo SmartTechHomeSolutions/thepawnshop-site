@@ -794,25 +794,26 @@ h1 {
   color: rgba(255, 255, 255, 0.86);
 }
 
-.footer-social {
+.footer-socials {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
   align-items: center;
-  margin-top: 0.55rem;
+  margin-top: 1.1rem;
 }
 
 .footer-social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.35rem;
-  height: 2.35rem;
-  color: rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #f4eee2;
+  background: rgba(244, 238, 226, 0.04);
+  border: 1px solid rgba(244, 238, 226, 0.14);
+  border-radius: 0.35rem;
   box-shadow: none;
+  line-height: 0;
   transition:
     background-color 0.18s ease,
     border-color 0.18s ease,
@@ -821,21 +822,24 @@ h1 {
 }
 
 .footer-social-link svg {
-  width: 1rem;
-  height: 1rem;
+  display: block;
+  width: 1.15rem;
+  height: 1.15rem;
+  max-width: none;
+  flex: 0 0 1.15rem;
   fill: currentColor;
 }
 
 .footer-social-link:hover {
   color: #fff;
-  background: rgba(193, 55, 55, 0.2);
-  border-color: rgba(193, 55, 55, 0.5);
+  background: rgba(173, 47, 49, 0.24);
+  border-color: rgba(173, 47, 49, 0.5);
   transform: translateY(-1px);
 }
 
 .footer-social-link:focus-visible {
   color: #fff;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(244, 238, 226, 0.12);
   border-color: #f1dbc8;
   outline: 2px solid #f1dbc8;
   outline-offset: 2px;
@@ -1007,6 +1011,179 @@ h1 {
   text-align: center;
 }
 
+.shop-photo-section {
+  padding: clamp(3rem, 5.8vw, 5rem) 0;
+  background: var(--paper-deep);
+  border-top: 1px solid var(--line-dark);
+}
+
+.shop-photo-intro {
+  display: grid;
+  gap: 0.65rem;
+  max-width: 42rem;
+}
+
+.shop-photo-intro h2,
+.gallery-page .shop-gallery-section__intro h2 {
+  max-width: 12.5ch;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 0.88;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.shop-photo-intro .eyebrow {
+  letter-spacing: 0.22em;
+}
+
+.shop-photo-layout {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+}
+
+.shop-photo-feature,
+.shop-photo-card {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 0.95rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.shop-photo-feature {
+  padding: 1rem;
+}
+
+.shop-photo-card {
+  align-content: start;
+}
+
+.shop-photo-frame {
+  overflow: hidden;
+  aspect-ratio: var(--shop-photo-ratio, 4 / 3);
+  background: #efe8dc;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 0.15rem);
+}
+
+.shop-photo-feature .shop-photo-frame {
+  --shop-photo-ratio: 5 / 4;
+}
+
+.shop-photo-card.is-wide .shop-photo-frame {
+  --shop-photo-ratio: 16 / 9;
+}
+
+.shop-photo-card.is-tall .shop-photo-frame {
+  --shop-photo-ratio: 3 / 4;
+}
+
+.shop-photo-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shop-photo-image.is-contain {
+  object-fit: contain;
+  background: #f2ecdf;
+}
+
+.shop-photo-caption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.65rem;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.shop-photo-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.6rem;
+  padding: 0.2rem 0.55rem;
+  background: #fffaf2;
+  border: 1px solid var(--line-dark);
+  border-radius: 999px;
+  color: var(--red);
+  font-family: var(--ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.shop-photo-note {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.shop-photo-supports {
+  display: grid;
+  gap: 1rem;
+}
+
+.shop-photo-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.shop-photo-grid .shop-photo-card {
+  height: 100%;
+}
+
+.services-photo-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.services-photo-grid .shop-photo-card h3 {
+  color: #1d2430;
+  font-size: 1rem;
+  line-height: 1.08;
+}
+
+.services-photo-grid .shop-photo-note {
+  margin-top: -0.1rem;
+}
+
+.gallery-page .page-hero h1 {
+  max-width: 12ch;
+}
+
+.gallery-page .shop-gallery-section {
+  padding: clamp(2.85rem, 5vw, 4.65rem) 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line-dark);
+}
+
+.gallery-page .shop-gallery-section:nth-of-type(even) {
+  background: var(--paper-deep);
+}
+
+.gallery-page .shop-gallery-section__intro {
+  display: grid;
+  gap: 0.45rem;
+  max-width: 42rem;
+  margin-bottom: 1.2rem;
+}
+
+.gallery-page .shop-photo-grid {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .media-slot {
   display: grid;
   gap: 0.75rem;
@@ -1173,6 +1350,11 @@ h1 {
   .reviews-button {
     grid-column: 1 / -1;
   }
+
+  .services-photo-grid,
+  .gallery-page .shop-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 62rem) {
@@ -1286,12 +1468,32 @@ h1 {
     border-left: 1px solid rgba(255, 255, 255, 0.16);
   }
 
-  .footer-social {
-    margin-top: 0.75rem;
+  .footer-socials {
+    margin-top: 0.9rem;
   }
 
   .editorial-grid {
     grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.7fr);
+  }
+
+  .home-page .shop-photo-layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.92fr);
+  }
+
+  .home-page .shop-photo-supports {
+    align-content: start;
+  }
+
+  .services-photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gallery-page .shop-photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gallery-page .shop-photo-card.is-wide {
+    grid-column: span 2;
   }
 }
 
@@ -1526,5 +1728,21 @@ h1 {
   .gun-room-photo-card {
     width: 100%;
     justify-self: stretch;
+  }
+
+  .home-page .shop-photo-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-page .shop-photo-feature {
+    order: 0;
+  }
+
+  .home-page .shop-photo-supports {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gallery-page .shop-photo-card.is-wide {
+    grid-column: auto;
   }
 }
