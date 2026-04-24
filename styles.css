@@ -866,6 +866,48 @@ h1 {
   margin-inline: auto;
 }
 
+.home-storefront-band .media-slot {
+  max-width: 34rem;
+}
+
+.services-gun-room-band .media-slot {
+  max-width: 48rem;
+}
+
+.media-slot__figure {
+  display: grid;
+  gap: 0.7rem;
+  padding: clamp(0.9rem, 1.8vw, 1.25rem);
+  background: #fffaf2;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.media-slot__figure--wide {
+  --media-ratio: 21 / 9;
+}
+
+.media-slot__figure--tall {
+  --media-ratio: 16 / 10;
+}
+
+.media-slot__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: var(--media-ratio, 16 / 9);
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 0.12rem);
+  background: #efe8dc;
+}
+
+.media-slot__caption {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
 .media-slot__frame {
   display: grid;
   align-content: center;
