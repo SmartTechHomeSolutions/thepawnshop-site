@@ -1099,6 +1099,10 @@ h1 {
   margin-block: clamp(0.9rem, 2vw, 1.25rem);
 }
 
+.home-page .home-reviews__intro {
+  margin-bottom: clamp(1.35rem, 2vw, 1.75rem);
+}
+
 .home-page .reviews-grid {
   gap: clamp(0.95rem, 1.6vw, 1.2rem);
   align-items: stretch;
