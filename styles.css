@@ -1216,3 +1216,94 @@ h1 {
     padding: 1.25rem 1.3rem;
   }
 }
+
+.about-page .page-hero-grid {
+  align-items: start;
+}
+
+.about-page .about-at-a-glance {
+  gap: 0.9rem;
+}
+
+.about-page .about-at-a-glance__facts {
+  margin-top: 0.1rem;
+}
+
+.about-page .about-at-a-glance__note {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.about-page .about-story__content {
+  gap: 1rem;
+}
+
+.about-page .about-scale-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-page .about-stat-card {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.1rem 1.15rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.about-page .about-stat-number {
+  color: var(--navy);
+  font-family: var(--ui);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-page .about-bridge {
+  margin: clamp(1rem, 2vw, 1.5rem) auto 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--line-dark);
+  text-align: center;
+}
+
+.about-page .about-bridge p {
+  color: var(--ink);
+  font-family: var(--ui);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+@media (min-width: 44rem) {
+  .about-page .about-scale-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-page .about-bridge {
+    padding-top: 1.15rem;
+  }
+}
+
+@media (min-width: 62rem) {
+  .about-page .about-story__content {
+    grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+    align-items: stretch;
+  }
+
+  .about-page .about-scale-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-page .about-expect .feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-page .about-bridge {
+    margin-top: 0.5rem;
+  }
+}
