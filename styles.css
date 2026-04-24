@@ -1047,42 +1047,77 @@ h1 {
 
 .home-shop-preview {
   display: grid;
-  gap: clamp(1.5rem, 4vw, 3rem);
+  gap: clamp(1.15rem, 2.8vw, 2.35rem);
   align-items: center;
 }
 
-.home-shop-preview__copy {
-  max-width: 34rem;
+.home-shop-preview__content {
+  max-width: 32rem;
 }
 
-.home-shop-collage {
+.home-shop-preview__content .lead {
+  max-width: 31rem;
+}
+
+.home-shop-preview__gallery {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+  gap: 0.9rem;
+  min-width: 0;
+  align-items: start;
+}
+
+.home-shop-preview__feature,
+.home-shop-preview__photo {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  margin: 0;
+}
+
+.home-shop-preview__feature .home-shop-preview__frame {
+  --shop-photo-ratio: 5 / 4;
+  box-shadow: var(--shadow-soft);
+}
+
+.home-shop-preview__stack {
+  display: grid;
   gap: 0.9rem;
   min-width: 0;
 }
 
-.home-shop-collage .shop-photo-card {
-  padding: 0.8rem;
+.home-shop-preview__photo .home-shop-preview__frame {
+  box-shadow: var(--shadow-soft);
 }
 
-.home-shop-collage .is-feature {
-  grid-row: span 2;
+.home-shop-preview__label {
+  position: absolute;
+  left: 0.65rem;
+  bottom: 0.65rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5rem;
+  padding: 0.15rem 0.5rem;
+  background: rgba(255, 250, 242, 0.96);
+  border: 1px solid var(--line-dark);
+  border-radius: 999px;
+  color: var(--red);
+  font-family: var(--ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  pointer-events: none;
 }
 
-.shop-photo-frame--feature {
-  aspect-ratio: 16 / 10;
+.home-shop-preview__frame {
+  position: relative;
 }
 
-.shop-photo-strip {
-  display: grid;
-  gap: 1.15rem;
-  align-items: start;
-}
-
-.shop-photo-strip__copy {
-  max-width: 34rem;
+.home-shop-preview__frame .shop-photo-image {
+  border-radius: calc(var(--radius) - 0.15rem);
 }
 
 .shop-photo-grid--compact {
@@ -1119,6 +1154,7 @@ h1 {
 }
 
 .shop-photo-frame {
+  position: relative;
   overflow: hidden;
   aspect-ratio: var(--shop-photo-ratio, 4 / 3);
   background: #efe8dc;
@@ -1533,6 +1569,10 @@ h1 {
     grid-template-columns: minmax(18rem, 0.9fr) minmax(0, 1.1fr);
   }
 
+  .home-page .home-shop-preview__gallery {
+    align-self: center;
+  }
+
   .gallery-page .shop-photo-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1569,47 +1609,52 @@ h1 {
 }
 
 .home-page .home-trust {
-  padding-block: clamp(0.95rem, 1.8vw, 1.35rem);
-  margin-bottom: clamp(0.9rem, 1.8vw, 1.25rem);
+  padding-block: clamp(0.8rem, 1.4vw, 1.1rem);
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
 }
 
 .home-page .trust-grid {
   gap: 0;
 }
 
+.home-page .home-inside {
+  padding-block: clamp(2.1rem, 4vw, 3.35rem);
+}
+
 .home-page .home-services {
-  padding-block: clamp(2.85rem, 5vw, 4.5rem);
+  padding-block: clamp(2.15rem, 4vw, 3.4rem);
+  margin-block: clamp(0.5rem, 1.1vw, 0.8rem);
 }
 
 .home-page .home-services__intro {
-  margin-bottom: clamp(1.75rem, 2.7vw, 2.25rem);
+  margin-bottom: clamp(1.15rem, 2vw, 1.75rem);
 }
 
 .home-page .home-services .category-grid {
-  gap: clamp(0.9rem, 1.7vw, 1.15rem);
+  gap: clamp(0.8rem, 1.4vw, 1.05rem);
 }
 
 .home-page .home-services .category-card {
-  padding: clamp(1.05rem, 1.5vw, 1.35rem);
+  padding: clamp(0.95rem, 1.3vw, 1.2rem);
 }
 
 .home-page .home-reviews {
-  padding-block: clamp(2.4rem, 4.5vw, 3.75rem);
-  margin-block: clamp(0.9rem, 2vw, 1.25rem);
+  padding-block: clamp(2rem, 3.8vw, 3.1rem);
+  margin-block: clamp(0.55rem, 1.25vw, 0.9rem);
 }
 
 .home-page .home-reviews__intro {
-  margin-bottom: clamp(1.35rem, 2vw, 1.75rem);
+  margin-bottom: clamp(1rem, 1.8vw, 1.45rem);
 }
 
 .home-page .reviews-grid {
-  gap: clamp(0.95rem, 1.6vw, 1.2rem);
+  gap: clamp(0.8rem, 1.4vw, 1.05rem);
   align-items: stretch;
 }
 
 .home-page .rating-block,
 .home-page .review-card {
-  padding: 1.1rem 1.15rem;
+  padding: 0.95rem 1rem;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -1627,20 +1672,20 @@ h1 {
 }
 
 .home-page .reviews-button {
-  margin-top: 0.15rem;
+  margin-top: 0;
 }
 
 .home-page .home-contact {
-  padding-block: clamp(2.2rem, 4vw, 3.25rem);
-  margin-top: clamp(1rem, 2vw, 1.5rem);
+  padding-block: clamp(1.95rem, 3.6vw, 2.9rem);
+  margin-top: clamp(0.6rem, 1.25vw, 1rem);
 }
 
 .home-page .contact-grid {
-  gap: clamp(0.85rem, 1.5vw, 1.1rem);
+  gap: clamp(0.75rem, 1.3vw, 1rem);
 }
 
 .home-page .contact-item {
-  padding: 1.15rem;
+  padding: 1rem 1.05rem;
   align-items: start;
   background: var(--panel);
   border: 1px solid var(--line);
@@ -1776,6 +1821,10 @@ h1 {
   }
 
   .home-page .home-shop-preview {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-page .home-shop-preview__gallery {
     grid-template-columns: minmax(0, 1fr);
   }
 
