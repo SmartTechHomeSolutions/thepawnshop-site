@@ -1279,6 +1279,14 @@ h1 {
   height: clamp(12rem, 24vw, 18rem);
 }
 
+.buy-floor .photo-card img {
+  height: clamp(9.25rem, 15vw, 12.5rem);
+}
+
+.buy-floor .photo-card--wide img {
+  height: clamp(10rem, 16vw, 13rem);
+}
+
 .photo-card--square {
   --photo-card-ratio: 1 / 1;
 }
@@ -1366,6 +1374,7 @@ h1 {
   display: grid;
   gap: 0.7rem;
   min-width: 0;
+  height: 100%;
   padding: 0.95rem;
   background: var(--panel);
   border: 1px solid var(--line);
@@ -1407,6 +1416,14 @@ h1 {
 .category-photo-card__body {
   display: grid;
   gap: 0.35rem;
+}
+
+.category-photo-card--text {
+  align-content: start;
+}
+
+.category-photo-card--text .category-photo-card__body {
+  min-height: 100%;
 }
 
 .category-photo-card__body p {
@@ -1481,6 +1498,18 @@ h1 {
 
 .module-photo-grid {
   margin-top: 0.15rem;
+}
+
+.sell-page .module-photo-grid .photo-card {
+  padding: 0.68rem;
+}
+
+.sell-page .module-photo-grid .photo-card img {
+  height: clamp(8.8rem, 14vw, 11.4rem);
+}
+
+.sell-page .module-photo-grid .photo-card--wide img {
+  height: clamp(9.2rem, 15vw, 12rem);
 }
 
 .home-around {
@@ -2084,6 +2113,10 @@ h1 {
   gap: 1rem;
 }
 
+.about-page .about-story .copy-panel {
+  margin-top: 0.2rem;
+}
+
 @media (min-width: 62rem) {
   .about-page .page-hero-grid,
   .about-page .interior-module__inner {
@@ -2097,6 +2130,10 @@ h1 {
 
   .about-page .about-story__content {
     align-self: start;
+  }
+
+  .about-page .about-story__stack {
+    gap: 0.8rem;
   }
 }
 
