@@ -1071,28 +1071,6 @@ h1 {
   margin: 0;
 }
 
-.home-shop-preview__label {
-  position: absolute;
-  left: 0.65rem;
-  bottom: 0.65rem;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.5rem;
-  padding: 0.15rem 0.5rem;
-  background: rgba(255, 250, 242, 0.96);
-  border: 1px solid var(--line-dark);
-  border-radius: 999px;
-  color: var(--red);
-  font-family: var(--ui);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  line-height: 1;
-  text-transform: uppercase;
-  pointer-events: none;
-}
-
 .home-shop-preview__frame {
   position: relative;
 }
@@ -1111,11 +1089,6 @@ h1 {
 
 .shop-photo-grid--compact .shop-photo-card {
   padding: 0.75rem;
-}
-
-.shop-photo-grid--compact .shop-photo-label {
-  padding-inline: 0.5rem;
-  font-size: 0.68rem;
 }
 
 .shop-photo-feature,
@@ -1249,15 +1222,6 @@ h1 {
   --photo-card-ratio: 1 / 1;
 }
 
-.site-photo-card__caption,
-.shop-photo-caption,
-.shop-photo-label,
-.photo-caption,
-.photo-kicker,
-.category-photo-card__kicker {
-  display: none;
-}
-
 .photo-cluster {
   display: grid;
   gap: 0.9rem;
@@ -1348,6 +1312,10 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.category-photo-card--music .category-photo-card__media img {
+  object-position: 95% center;
 }
 
 .category-photo-card__body {
@@ -1528,13 +1496,6 @@ h1 {
   background: #efe8dc;
 }
 
-.media-slot__caption {
-  color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.45;
-  text-align: center;
-}
-
 .media-slot__frame {
   display: grid;
   align-content: center;
@@ -1557,16 +1518,6 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-}
-
-.media-slot__label {
-  color: var(--ink);
-  font-family: var(--display);
-  font-size: clamp(1.35rem, 2.6vw, 2.1rem);
-  line-height: 0.92;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  text-wrap: balance;
 }
 
 .media-slot__note {
