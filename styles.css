@@ -928,6 +928,10 @@ h1 {
   justify-self: end;
 }
 
+.storefront-photo-card .site-photo-card__figure--wide {
+  --photo-ratio: 2 / 1;
+}
+
 .gun-room-photo-card {
   width: min(100%, 37rem);
 }
@@ -1067,27 +1071,11 @@ h1 {
   align-items: start;
 }
 
-.home-shop-preview__feature,
 .home-shop-preview__photo {
   position: relative;
   display: grid;
   min-width: 0;
   margin: 0;
-}
-
-.home-shop-preview__feature .home-shop-preview__frame {
-  --shop-photo-ratio: 5 / 4;
-  box-shadow: var(--shadow-soft);
-}
-
-.home-shop-preview__stack {
-  display: grid;
-  gap: 0.9rem;
-  min-width: 0;
-}
-
-.home-shop-preview__photo .home-shop-preview__frame {
-  box-shadow: var(--shadow-soft);
 }
 
 .home-shop-preview__label {
@@ -1118,6 +1106,10 @@ h1 {
 
 .home-shop-preview__frame .shop-photo-image {
   border-radius: calc(var(--radius) - 0.15rem);
+}
+
+.home-page .home-shop-preview__gallery .photo-card img {
+  height: clamp(9.6rem, 15vw, 12.8rem);
 }
 
 .shop-photo-grid--compact {
@@ -1888,14 +1880,6 @@ h1 {
     grid-column: span 2;
   }
 
-  .photo-cluster {
-    grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
-    align-items: start;
-  }
-
-  .photo-cluster__stack {
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 78rem) {
